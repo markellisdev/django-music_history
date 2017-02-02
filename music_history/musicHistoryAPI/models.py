@@ -28,7 +28,12 @@ class Song(models.Model):
 	genreId = ForeignKey(Genre, on_delete=Models.CASCADE)
 
 class AlbumWithSong(models.Model):
+	albumId = models.ManyToManyField(Album)
+	songId = models.ManyToManyField(Song)
 
 class ArtistOnAlbum(models.Model):
+	artistId = models.ManyToManyField(Artist)
+	albumId = models.ManyToManyField(Album)
 
 class Genre(models.Model):
+	title = models.CharField(max_length=140)
