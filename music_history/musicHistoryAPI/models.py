@@ -13,3 +13,13 @@ class Musician(models.Model):
 	last_name = models.CharField(max_length=55)
 	instrument = models.CharField(max_length=55)
 	artistId = models.ForeignKey(Artist, on_delete=Models.CASCADE)
+
+class Album(models.Model):
+
+class Song(models.Model):
+
+class AlbumWithSong(models.Model):
+
+class ArtistOnAlbum(models.Model):
+
+class Genre(models.Model):
