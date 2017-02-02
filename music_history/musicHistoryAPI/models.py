@@ -15,8 +15,17 @@ class Musician(models.Model):
 	artistId = models.ForeignKey(Artist, on_delete=Models.CASCADE)
 
 class Album(models.Model):
+	title = models.CharField(max_length=240)
+	release_date = models.DateField()
+	duration = models.TimeField()
+	artistId = models.ForeignKey(Artist, on_delete=Models.CASCADE)
+	genreId = models.ForeignKey(Genre, on_delete=Models.CASCADE)
 
 class Song(models.Model):
+	title = models.CharField(max_length=140)
+	duration = models.TimeField()
+	artistId = ForeignKey(Artist, on_delete=Models.CASCADE)
+	genreId = ForeignKey(Genre, on_delete=Models.CASCADE)
 
 class AlbumWithSong(models.Model):
 
