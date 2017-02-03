@@ -7,4 +7,4 @@ class MusicianViewSet(viewsets.ModelViewSet):
 	A ViewSet for viewing and editing musicians.
 	"""
 	queryset = Musician.objects.all()
-	serializer_class = MusicianSerializer
+	serializer_class = musician_serializer.MusicianSerializer

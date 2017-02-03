@@ -7,4 +7,4 @@ class ArtistOnAlbumViewSet(viewsets.ModelViewSet):
 	A ViewSet for viewing artists on albums.
 	"""
 	queryset = ArtistOnAlbum.objects.all()
-	serializer_class = ArtistOnAlbumSerializer
+	serializer_class = artistOnAlbum.ArtistOnAlbumSerializer

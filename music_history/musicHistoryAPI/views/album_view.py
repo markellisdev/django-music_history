@@ -7,4 +7,4 @@ class AlbumViewSet(viewsets.ModelViewSet):
 	A ViewSet for viewing and editing Albums.
 	"""
 	queryset = Album.objects.all()
-	serializer_class = AlbumSerializer
+	serializer_class = album_serializer.AlbumSerializer

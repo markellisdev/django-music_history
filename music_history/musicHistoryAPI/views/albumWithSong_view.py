@@ -7,4 +7,4 @@ class AlbumWithSongViewSet(viewsets.ModelViewSet):
 	A ViewSet for viewing and editing genres.
 	"""
 	queryset = AlbumWithSong.objects.all()
-	serializer_class = AlbumWithSongSerializer
+	serializer_class = albumWithSong.AlbumWithSongSerializer

@@ -1,5 +1,6 @@
 from django.db import models
+from . import *
 
 class AlbumWithSong(models.Model):
-	albumId = models.ManyToManyField(Album)
-	songId = models.ManyToManyField(Song)
+	albumId = models.ManyToManyField(album_model.Album)
+	songId = models.ManyToManyField(song_model.Song)

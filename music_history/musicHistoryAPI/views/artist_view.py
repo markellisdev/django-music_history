@@ -7,4 +7,4 @@ class ArtistViewSet(viewsets.ModelViewSet):
 	A ViewSet for viewing and editing artists.
 	"""
 	queryset = Artist.objects.all()
-	serializer_class = ArtistSerializer
+	serializer_class = artist_serializer.ArtistSerializer

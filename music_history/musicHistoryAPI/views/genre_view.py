@@ -7,4 +7,4 @@ class GenreViewSet(viewsets.ModelViewSet):
 	A ViewSet for viewing and editing genres.
 	"""
 	queryset = Genre.objects.all()
-	serializer_class = GenreSerializer
+	serializer_class = genre_serializer.GenreSerializer
