@@ -3,8 +3,8 @@ from musicHistoryAPI.models import *
 from musicHistoryAPI.serializers import *
 
 class AlbumViewSet(viewsets.ModelViewSet):
-	"""
-	A ViewSet for viewing and editing Albums.
-	"""
-	queryset = Album.objects.all()
-	serializer_class = AlbumSerializer
+    """
+    A ViewSet for viewing and editing Albums.
+    """
+    queryset = album_model.Album.objects.all()
+    serializer_class = album_serializer.AlbumSerializer
