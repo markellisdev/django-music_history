@@ -19,16 +19,17 @@ from musicHistoryAPI.views import *
 from django.contrib import admin
 
 router = routers.DefaultRouter()
-router.register(r'users', user_view)
-router.register(r'artist', artist_view)
-router.register(r'album', album_view)
-router.register(r'song', song_view)
-router.register(r'genre', genre_view)
-router.register(r'albumWithSong', albumWithSong_view)
-router.register(r'artistOnAlbum', artistOnAlbum_view)
+router.register(r'users', user_view.UserViewSet)
+router.register(r'artist', artist_view.ArtistViewSet)
+router.register(r'album', album_view.AlbumViewSet)
+router.register(r'genre', genre_view.GenreViewSet)
+router.register(r'song', song_view.SongViewSet)
+router.register(r'musician', musician_view.MusicianViewSet)
+router.register(r'albumWithSong', albumWithSong_view.AlbumWithSongViewSet)
+router.register(r'artistOnAlbum', artistOnAlbum_view.ArtistOnAlbumViewSet)
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^admin/', admin.site.urls),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

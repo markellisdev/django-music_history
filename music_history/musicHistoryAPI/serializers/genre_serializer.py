@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from musicHistoryAPI.models import *
 
-class GenreSerializer(serializers.HyperlinkedmodelSerializer):
+class GenreSerializer(serializers.HyperlinkedModelSerializer):
 
-	class Meta:
-		model = Artist
-		fields = ('title', )
+    class Meta:
+        model = artist_model.Artist
+        fields = ('title', )
